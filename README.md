@@ -24,16 +24,16 @@ The service is to provide a basic REST interface as follows:
 - `DELETE /concerts`. Deletes all `Concert`s, and returns a 204 status code.
 
 #### About the domain model
-The Web service is to store `Concert` and `Performer` entities. Similarly to Lab 03's `se325-lab-03-database` exercise, a `Concert` has a `Performer`, `Performer` may perform at many `Concert`s. For the REST interface, you don't need to use DTO classes - `Concert`s and `Performer`s are sufficiently simple and involve little data, so when a `Concert` is being exchanged between a client and the Web service, it should include its `Performer`. JSON should be supported as the data interchange format of choice for this web service.
+The Web service is to store `Concert` and `Performer` entities. Similarly to Lab 03's `lab-jpa` exercise, a `Concert` has a `Performer`, `Performer` may perform at many `Concert`s. For the REST interface, you don't need to use DTO classes - `Concert`s and `Performer`s are sufficiently simple and involve little data, so when a `Concert` is being exchanged between a client and the Web service, it should include its `Performer`. JSON should be supported as the data interchange format of choice for this web service.
 
 #### Project structure
-A partially complete project named `se325-lab-04-concert` can be found in the repository. The project is a multi-module project with `se325-lab-04-concert-domain-model` and `se325-lab-04-concert-web-service` as child projects.
+A partially complete project named `lab-end2end` can be found in this repository. The project is a multi-module project with `lab-end2end-concert-domain-model` and `lab-end2end-concert-web-service` as child projects.
 
 - The parent project's POM file declares dependencies common to the two modules.
 
-- The `se325-lab-04-concert-domain-model` project includes complete implementations of the `Concert` and `Performer` classes, along with classes that are useful during JSON marshalling/unmrshalling. It also contains the unit test class `DomainModelTest`, which can help determine whether the domain classes have been correctly annotated for persistence (JPA) and data transfer (Jackson).
+- The `lab-end2end-concert-domain-model` project includes complete implementations of the `Concert` and `Performer` classes, along with classes that are useful during JSON marshalling/unmrshalling. It also contains the unit test class `DomainModelTest`, which can help determine whether the domain classes have been correctly annotated for persistence (JPA) and data transfer (Jackson).
 
-- Project `se325-lab-04-concert-web-service` includes a JPA configuration file (`persistence.xml`), a class named `PersistenceManager`, and an integration test class (`ConcertResourceIT`).
+- Project `lab-end2end-concert-web-service` includes a JPA configuration file (`persistence.xml`), a class named `PersistenceManager`, and an integration test class (`ConcertResourceIT`).
 
 #### (a) Import the project
 Import the project into your IDE, as you have done for multi-module projects in previous labs.
@@ -42,7 +42,7 @@ Import the project into your IDE, as you have done for multi-module projects in 
 To complete the project, you need to do the following:
 
 - Add all necessary metadata (annotations) to the domain classes `Concert` and `Performer`. You should use appropriate Jackson annotations to specify how instances are to be marshalled / unmarshalled to/from JSON. Similarly, you should add JPA annotations to specify how `Concert` and `Performer` instances should be persisted.
-   - **You may transfer your `Concert` and `Performer` classes from the previous lab's `se325-lab-03-database` exercise** to give you a head start on the JPA annotations.
+   - **You may transfer your `Concert` and `Performer` classes from the previous lab's `lab-jpa-database` exercise** to give you a head start on the JPA annotations.
    - **Note:** The `Concert` class doesn't have a `setPerformer()` method. Consider how this interacts with Jackson marshalling / unmarshalling, and how you might address this issue.
 
 - Introduce a subclass of `javax.ws.rs.core.Application`. This has two start-up responsibilities. First, it should return a *resource-per-request* handler for processing HTTP requests. Second, it should instantiate the supplied `PersistenceManager` class.
