@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>nz.ac.auckland</groupId>
+		<artifactId>lab-end2end</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>lab-end2end-concert-domain-model</artifactId>
+
+	<properties>
+		<jackson.version>2.10.5</jackson.version>
+	</properties>
+
+	<!-- All of these are "provided" scope so our program can compile, but we won't actually import these JARs.
+	We will use whatever Jackson version that our jackson2-provider needs. -->
+	<dependencies>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
