@@ -109,7 +109,11 @@ You may run just the domain model unit tests (`DomainModelTest`) directly from y
 
 You might want to use the H2 console so see the tables that have been generated and populated. 
 
-#### (d) Reflect on the project
+#### (d) Github Classroom
+After you finish all exercises and push the code to the repository on Github, Please check if the execution of `Github classroom workflow` runs successfully without any test fails.
+
+
+#### (e) Reflect on the project
 Reflect on the project, and note your thoughts here. Some questions to consider:
 
 - With regard to web services, what are the benefits to having stateless services?
