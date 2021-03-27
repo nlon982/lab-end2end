@@ -5,7 +5,9 @@ Before you start
 ----------
 The purpose of this lab is to reinforce and build upon the course material, gaining more practice with JPA, Jackson, and JAX-RS in the end-to-end development of a simple Concert service.
 
-Begin by forking this repository, then cloning your fork onto your local machine.
+You may work individually or in teams of any size up to a maximum of 5 members. However if you do work in a team, note the assessment guidelines. If you work indivudally, you must still join a "group" on Canvas and a "team" on Github (because we still need to track who is doing what).
+
+You must provide a `Team.md` file. If you are working individually, your file must state that. Otherwise it should be used as for past labs.
 
 Exercise - Develop a stateless Concert Web service that uses ORM
 ----------
@@ -127,3 +129,22 @@ Note your thoughts here, and in your journal.
 ```
 Your thoughts here.
 ```
+
+## Assessment
+
+The marking of this lab will be based on your team repository as of **MONDAY**  19 April 1700hrs (after the break).
+
+Assessment will be performed by examining the commit logs and other
+information associated with your repository.  If you are working in a team,
+you must demonstrate that you have engaged with the lab material and fully
+participated with the team. This means we expect to see non-trivial commits,
+with meaningful commit messages. As with past labs, we will be looking for
+evidence that there was cooperation and collaboration within the
+team. Examples including making useful commits, and commenting on actions by
+other team members.
+
+Marks will be allocated as follows (maximum of 2 marks, minimum of 0):
+
+- If any tests do not pass, 1 mark will be deducted from the possible score from all team members
+- Any member that we cannot find evidence of having contributed to the lab will have 2 marks deducted. Note that just a statement in `Team.md` will not be sufficient evidence.
+- If there is no `Team.md` file or it does not contain the relevant information, 1 mark will be deducted from all team members
