@@ -9,6 +9,8 @@ You may work individually or in teams of any size up to a maximum of 5 members. 
 
 You must provide a `Team.md` file. If you are working individually, your file must state that. Otherwise it should be used as for past labs.
 
+Note: there is a recording discussion JPQL on Canvas.
+
 Exercise - Develop a stateless Concert Web service that uses ORM
 ----------
 Develop a JAX-RS Web service for managing Concerts. The service should be stateless and use JPA to persist domain objects to a database.
@@ -26,7 +28,7 @@ The service is to provide a basic REST interface as follows:
 - `DELETE /concerts`. Deletes all `Concert`s, and returns a 204 status code.
 
 #### About the domain model
-The Web service is to store `Concert` and `Performer` entities. Similarly to Lab 03's `lab-jpa` exercise, a `Concert` has a `Performer`, `Performer` may perform at many `Concert`s. For the REST interface, you don't need to use DTO classes - `Concert`s and `Performer`s are sufficiently simple and involve little data, so when a `Concert` is being exchanged between a client and the Web service, it should include its `Performer`. JSON should be supported as the data interchange format of choice for this web service.
+The Web service is to store `Concert` and `Performer` entities. Similarly to the `lab-jpa` exercise, a `Concert` has a `Performer`, `Performer` may perform at many `Concert`s. For the REST interface, you don't need to use DTO classes - `Concert`s and `Performer`s are sufficiently simple and involve little data, so when a `Concert` is being exchanged between a client and the Web service, it should include its `Performer`. JSON should be supported as the data interchange format of choice for this web service.
 
 #### Project structure
 A partially complete project named `lab-end2end` can be found in this repository. The project is a multi-module project with `lab-end2end-concert-domain-model` and `lab-end2end-concert-web-service` as child projects.
@@ -37,10 +39,7 @@ A partially complete project named `lab-end2end` can be found in this repository
 
 - Project `lab-end2end-concert-web-service` includes a JPA configuration file (`persistence.xml`), a class named `PersistenceManager`, and an integration test class (`ConcertResourceIT`).
 
-#### (a) Import the project
-Import the project into your IDE, as you have done for multi-module projects in previous labs.
-
-#### (b) Develop the project
+#### (a) Develop the project
 To complete the project, you need to do the following:
 
 - Add all necessary metadata (annotations) to the domain classes `Concert` and `Performer`. You should use appropriate Jackson annotations to specify how instances are to be marshalled / unmarshalled to/from JSON. Similarly, you should add JPA annotations to specify how `Concert` and `Performer` instances should be persisted.
@@ -80,7 +79,7 @@ TypedQuery<Concert> concertQuery = em.createQuery("select c from Concert c", Con
 List<Concert> concerts = concertQuery.getResultList();
 ```
 
-JPQL will be introduced later. For further information, the Java Enterprise tutorial includes a chapter on JPQL: <https://docs.oracle.com/javaee/7/tutorial/persistence-querylanguage.htm>.
+Resources for JPQL have been provided on Canvas. For further information, the Java Enterprise tutorial includes a chapter on JPQL: <https://docs.oracle.com/javaee/7/tutorial/persistence-querylanguage.htm>.
 
 ###### EntityManager usage scenario
 
@@ -104,31 +103,25 @@ try {
 }
 ```
 
-#### (c) Run the project
-Once you've added the metadata, `Application` and `Resource` classes, build and run the project, by running the Maven `verify` goal on the `lab-04-concert-parent` project. This will run both the domain model unit tests, and the web service integration tests. These should all pass.
+#### (b) Run the project
+Once you've added the metadata, `Application` and `Resource` classes, build and run the project, by running the Maven `verify` goal on the `lab-end2end` project. This will run both the domain model unit tests, and the web service integration tests. These should all pass.
 
 You may run just the domain model unit tests (`DomainModelTest`) directly from your IDE, if you would like to make sure your annotations are correct before proceeding to implement the web service.
 
 You might want to use the H2 console so see the tables that have been generated and populated. 
 
-#### (d) Github Classroom
-After you finish all exercises and push the code to the repository on Github, Please check if the execution of `Github classroom workflow` runs successfully without any test fails.
+#### Github Classroom
+After you finish all exercises and push the code to the repository on Github,
+and confirm that the execution of `Github classroom workflow` runs successfully without any failed test.
 
-
-#### (e) Reflect on the project
-Reflect on the project, and note your thoughts here. Some questions to consider:
+Points to consider
+----------
 
 - With regard to web services, what are the benefits to having stateless services?
 
 - What are some of the benefits provided by an ORM?
 
 - What are the benefits and drawbacks with using your domain model classes for both data transfer and persistence, as opposed to using separate DTO classes for data transfer?
-
-Note your thoughts here, and in your journal.
-
-```
-Your thoughts here.
-```
 
 ## Assessment
 
@@ -142,6 +135,8 @@ with meaningful commit messages. As with past labs, we will be looking for
 evidence that there was cooperation and collaboration within the
 team. Examples including making useful commits, and commenting on actions by
 other team members.
+
+If you join a team without permission of existing team members you will receive zero for the lab. Teamwork requires cooperation.
 
 Marks will be allocated as follows (maximum of 2 marks, minimum of 0):
 
