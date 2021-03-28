@@ -5,7 +5,7 @@ Before you start
 ----------
 The purpose of this lab is to reinforce and build upon the course material, gaining more practice with JPA, Jackson, and JAX-RS in the end-to-end development of a simple Concert service.
 
-You may work individually or in teams of any size up to a maximum of 5 members. However if you do work in a team, note the assessment guidelines. If you work indivudally, you must still join a "group" on Canvas and a "team" on Github (because we still need to track who is doing what).
+You may work individually or in teams of any size up to a maximum of 5 members. However if you do work in a team, note the assessment guidelines. If you work individually, you must still join a "group" on Canvas and a "team" on Github (because we still need to track who is doing what).
 
 You must provide a `Team.md` file. If you are working individually, your file must state that. Otherwise it should be used as for past labs.
 
@@ -35,7 +35,7 @@ A partially complete project named `lab-end2end` can be found in this repository
 
 - The parent project's POM file declares dependencies common to the two modules.
 
-- The `lab-end2end-concert-domain-model` project includes complete implementations of the `Concert` and `Performer` classes, along with classes that are useful during JSON marshalling/unmrshalling. It also contains the unit test class `DomainModelTest`, which can help determine whether the domain classes have been correctly annotated for persistence (JPA) and data transfer (Jackson).
+- The `lab-end2end-concert-domain-model` project includes complete implementations of the `Concert` and `Performer` classes, along with classes that are useful during JSON marshalling/unmarshalling. It also contains the unit test class `DomainModelTest`, which can help determine whether the domain classes have been correctly annotated for persistence (JPA) and data transfer (Jackson).
 
 - Project `lab-end2end-concert-web-service` includes a JPA configuration file (`persistence.xml`), a class named `PersistenceManager`, and an integration test class (`ConcertResourceIT`).
 
