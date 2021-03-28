@@ -125,7 +125,7 @@ Points to consider
 
 ## Assessment
 
-The marking of this lab will be based on your team repository as of **MONDAY**  19 April 1700hrs (after the break).
+The marking of this lab will be based on your team repository as of Friday 23rd April 1700hrs.
 
 Assessment will be performed by examining the commit logs and other
 information associated with your repository.  If you are working in a team,
