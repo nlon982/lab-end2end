@@ -1,4 +1,4 @@
-Lab - JPA and end-to-end web service development
+Lab05 - JPA and end-to-end web service development
 ==========
 
 Before you start
@@ -11,7 +11,7 @@ You must provide a `Team.md` file. If you are working individually, your file mu
 
 Note: there is a recording discussion JPQL on Canvas.
 
-Exercise - Develop a stateless Concert Web service that uses ORM
+Exercise 1 (the only exercise) - Develop a stateless Concert Web service that uses ORM
 ----------
 Develop a JAX-RS Web service for managing Concerts. The service should be stateless and use JPA to persist domain objects to a database.
 
@@ -122,24 +122,3 @@ Points to consider
 - What are some of the benefits provided by an ORM?
 
 - What are the benefits and drawbacks with using your domain model classes for both data transfer and persistence, as opposed to using separate DTO classes for data transfer?
-
-## Assessment
-
-The marking of this lab will be based on your team repository as of Friday 23rd April 1700hrs.
-
-Assessment will be performed by examining the commit logs and other
-information associated with your repository.  If you are working in a team,
-you must demonstrate that you have engaged with the lab material and fully
-participated with the team. This means we expect to see non-trivial commits,
-with meaningful commit messages. As with past labs, we will be looking for
-evidence that there was cooperation and collaboration within the
-team. Examples including making useful commits, and commenting on actions by
-other team members.
-
-If you join a team without permission of existing team members you will receive zero for the lab. Teamwork requires cooperation.
-
-Marks will be allocated as follows (maximum of 2 marks, minimum of 0):
-
-- If any tests do not pass, 1 mark will be deducted from the possible score from all team members
-- Any member that we cannot find evidence of having contributed to the lab will have 2 marks deducted. Note that just a statement in `Team.md` will not be sufficient evidence.
-- If there is no `Team.md` file or it does not contain the relevant information, 1 mark will be deducted from all team members
